@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/defautl.css">
+    <title>Etep-tech Home</title>
+    <link rel="shortcut icon" href="images/logo.jpeg" type="images/icon">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="left">
+                <div class="logo">
+                   <a> <img src="images/alt logo.jpeg" alt="Profile pic"></a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="menu" data-text="welcome to the home technology">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Our work</a></li>
+                        <li><a href="">Resources</a></li>
+                        <li><a href="">Services</a></li>
+                        <li >
+                            <a class="dropdown" href=""
+                            >About us
+                                <!-- <li class=""><a href="">Who we are</a></li>
+                                <li class=""><a href="">Meet our team</a></li>
+                                <li class=""><a href="">Career</a></li> -->
+                            </a>
+                        </li>
+                        <li style="padding: 0;"><a href="portfolio/portfolio.html">Contact us</a></li>
+                    </ul>
+                </div>
+                 <div class="toggle">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                 </div>
+            </div>
+        </header>
+        <div class="message">
+            <p>Please note that some features of this
+                website are not fully functional, reasons been that the
+                 website is still under production and will be ready in dew course.</p>
+                 <button>Ok</button>
+        </div>
+        <div class="slidder">
+        <div class="slidder-inner">
+            <div class="item" data-text="Developer">
+                <img src="images/softwaredev.jpg" alt="image1.png">
+                <div class="text">
+                    <h1>Software <br>Developer</h1>
+                </div>
+            </div>
+            <div class="item" data-text="Frontend Dev">
+                <img src="images/frontend.png" alt="">
+                <div class="text">
+                    <h1>Frontend <br>Developer</h1>
+                </div>
+            </div>
+            <div class="item" data-text="Deskstop Apps">
+                <img src="images/desktopapp.jpg" alt="image1.png">
+                <div class="text">
+                    <h1>Desktop<br>Applications Dev</h1>
+                </div>
+            </div>
+        </div>
+        <a  class="btn">Learn more</a>
+    </div>
+    </div>
+    <div class="wave-line">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slidder-inner').slick({
+                infinite:false,
+                slidesToShow:1,
+                slidesToScroll:1,
+                swipe:false,
+                fade:true,
+                speed:1500
+            });
+            $('.message').css('visibility','visible');
+            $('.message button').click(function(){
+                $('.message').css('visibility','hidden');
+            });
+        });
+    </script>
+</body>
+</html>
