@@ -1,0 +1,387 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    outline: none;
+
+}
+body{
+    background-color: #412e35;
+    font-family: Space Grotest;
+    overflow-x: hidden;
+}
+h1{
+    font-family: Butler;
+}
+.wrapper{
+    position: relative;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    padding: 30px 130px;
+    justify-content: space-between;
+    align-items: center;
+    position:fixed;
+    width: 100%;
+    z-index: 99;
+    background-color: #000;
+
+}
+
+
+.message{
+    position: absolute;
+    background-color: #ffffff;
+    border: 1 px solid #ccc;
+    top: 50%;
+    transform: translate(-50deg ,-50deg);
+    z-index: 99999;
+    width: 400px;
+    min-height: 100px;
+    outline: #24c0c5 4px solid;
+    visibility: hidden;
+    padding: 1rem;
+    right:40%;
+}
+.left .logo a > img{
+     cursor: pointer;
+}
+.message p{
+    padding: .5rem ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 2em;
+    
+}
+.message button{
+    width: 100px;
+    text-align: center;
+    position: relative;
+    right: 0;
+    left: 60%;
+    padding: .2rem 1rem;
+}
+header .left .logo{
+    display: flex;
+    width: 60px;
+    height: 60px;
+    padding: 0.3rem;
+}
+header .left .logo img{
+    width:100%;
+    border-radius: 50%;
+}
+header .left{
+    display: flex;
+    align-items: center;
+}
+header ul li{
+    list-style-type:none;
+    display: inline-block;
+    margin: 0px 25px ;
+}
+header ul li a{
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FFFF00;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    opacity: .8;
+}
+header ul li a:before{
+    display: flex;
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 40%;
+    width: 1px;
+    height: 60px;
+    background-color: #FFFF00;
+    transform: rotate(46deg) scale(0);
+    transition: all ease 0.5s;
+}
+header ul li a:hover:before{
+    transform: rotate(46deg) scale(1);
+
+}
+header ul li a:hover{
+    transition:all  ease 0.5s;
+    color: #835a07;
+}
+.menu{
+    position: relative;
+    margin-left:130px;
+}
+.menu:before{
+    content:"";
+    position:absolute;
+    left: -70px;
+    top: 48%;
+    width: 100px;
+    height: 1px;
+    background-color: #f2a200;
+}
+.toggle{
+    position: absolute;
+    display: inline-block;
+    width: 28px;
+    height: 17px;
+    visibility: hidden;
+    right: -2%;
+    margin-right: 1.5rem;
+    top: 30px;
+    transform: translate(-50deg, -50deg);
+}
+.toggle span{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    right: 0;
+    transition: all ease 0.5s;
+}
+.toggle span:nth-child(2){
+    top: 7px;
+    width: 60%;
+}
+.toggle span:nth-child(3){
+    top: 14px;
+    width: 30%;
+}
+.toggle:hover span{
+    width: 100%;
+    cursor: pointer;
+}
+.slidder{
+    position: relative;
+}
+.slidder .item{
+    position: relative!important;
+    text-align: center;
+    height: 100vh;
+    transform: translate(-50deg, -50deg);
+    padding: 5rem 0;
+}
+.slidder .item:before{
+    content: attr(data-text);
+    position: relative;
+    top:35%;
+    left:1%;
+    text-align: center;
+    transform: translate(-50deg, -50deg);
+    font-family: Butler;
+    letter-spacing: 1rem;
+    font-size:6em;
+    text-transform: uppercase;
+    opacity: .1;
+}
+.slidder .item img{
+    width: 40%;
+    margin:auto ;
+    box-shadow: 2px 2px 4px rgb(46, 38, 38);
+}
+.slidder h1{
+    font-size:5em;
+    letter-spacing: 1px;
+    color: rgb(38, 138, 13);
+    font-weight: normal;
+    text-transform: uppercase;
+    transition: all ease 0.5s;
+}
+.slidder .text{
+    position: relative;
+    width: 100%;
+    bottom:10px;
+    display: inline-block;
+}
+.slidder .slick-arrow{
+    position: absolute;
+    top: 95.5%;
+    bottom: 0!important;
+    right: 96%!important;
+    width: 70px;
+    height: 70px;
+    border: #fff 1px solid;
+    border-radius: 50%;
+    z-index: 9;
+
+}
+.slidder .slick-next{
+    right: inherit;
+    left: 220px;
+}
+.slidder .slick-prev{
+    left: 130px;
+}
+.slidder .slick-arrow.slick-disabled,
+.slidder .slick-arrow.slick-arrow.slick-disabled{
+    opacity: 0.3;
+}
+.btn{
+    width: 220px;
+    height: 70px;
+    line-height: 70px;
+    text-decoration: none;
+    text-align: center;
+    font: 16px 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #f2ca2c;
+    color: #000;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    transition: all ease 0.5s;
+    overflow: hidden;
+    cursor: pointer;
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000;
+    transition: all ease 0.5s;
+}
+.btn:hover{
+    color: #fff;
+}
+.btn:hover::before{
+    top: 0;
+    left: 0;
+}
+.wave-line{
+    position: absolute;
+    width: 100%;
+    top: 43%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+.wave-line .line{
+    position: absolute;
+    width: 100%;
+    height: 130px;
+}
+.wave-line .line1{
+    background: #f2ca2c;/*url() repeat-x*/
+    background-size: contain;
+    animation: lineOne;
+}
+
+.wave-line .line2{
+    background:#231750;/*url() repeat-x*/
+    background-size: contain;
+    animation: lineTwo;
+}
+.wave-line .line2{
+    background: #24c0c5;/*url() repeat-x*/
+    background-size: contain;
+    animation: lineThree;
+}
+/*=================================For laptops ===============================*/
+@media screen and (min-width:1024px) and (max-width:1254px) {
+    header .right ul li{
+        margin: 0;
+        padding: 0;
+        padding-right:.60rem;
+    }
+    
+}
+/*=================Tablet devices=======================================*/
+@media  screen and (min-width:714px) and (max-width:1023px) {
+  header .right ul li a{
+    height: 0px;
+
+  }
+   header{
+       padding: 20px 15px;
+       margin: 0;
+   }
+   header .right ul li  {
+       padding: 0 .20rem;
+       margin: 0;
+   }
+  .right{
+    position: absolute;
+    margin-left: 2rem;
+    padding: 0;
+    margin-right: .25rem;
+
+  } 
+}
+
+@media  screen and (min-width:425px) and ( max-width:725px) {
+    header{
+        background-color: #f2a200;
+    }
+    header .menu{
+        visibility: hidden;
+    }
+    header .right .toggle{
+        visibility: visible;
+    }
+    
+    header .left{
+        position:absolute;
+        top: 0;
+        left: 0;
+        margin: 1rem .25rem;
+    }
+    .btn{
+        width: 150px;
+        height: 57px;
+    }
+}
+@media  screen and (min-width:250px) and (max-width:423px){
+    header{
+        background-color:#f2a200 ;
+        flex-direction: column;
+        height: fit-content;
+        height:100px;
+    }
+    .menu::before{
+        content: ;
+        width: 0;
+        height: 0;
+    }
+    .menu{
+        visibility: hidden;
+    }
+    header .right .toggle{
+        visibility: visible;
+    }
+    header .left{
+        position: absolute;
+        left: 0;
+        top:0;
+        padding: 1rem .25rem;
+    }
+    .btn{
+        width: 115px;
+        height: 50px;
+        font-size: .7rem;
+    }
+   
+}
+
+@keyframes lineOne {
+    50%{
+        background-position: -150% 0;
+    }
+}
+@keyframes lineTwo {
+    50%{
+        background-position: -100% 0;
+    }
+}
+@keyframes lineThree {
+    50%{
+        background-position: 150% 0;
+    }
+}
